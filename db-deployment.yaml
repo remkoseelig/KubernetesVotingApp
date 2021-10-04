@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: #
+spec:
+  replicas: #
+  selector:
+    matchLabels:
+      app: #
+  template:
+    metadata:
+      labels:
+        app: #
+    spec:
+      containers:
+      - image: #
+        name: #
+#        env:
+#        - name: PGDATA
+#          value: /var/lib/postgresql/data/pgdata
+#        volumeMounts:
+#        - mountPath: /var/lib/postgresql/data
+#          name: #
+#      volumes:
+#      - name: #
+#        persistentVolumeClaim:
+#          claimName: #
