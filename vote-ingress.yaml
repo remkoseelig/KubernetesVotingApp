@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: #
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+spec: 
+  rules: 
+  - host: #.#.westeurope.aksapp.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: #
+          servicePort: #
