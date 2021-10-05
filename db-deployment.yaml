@@ -15,11 +15,11 @@ spec:
       containers:
       - image: #
         name: #
-#        env:
+        env:
+        - name: POSTGRES_HOST_AUTH_METHOD
+          value: "trust"
 #        - name: PGDATA
 #          value: /var/lib/postgresql/data/pgdata
-#        - name: POSTGRES_HOST_AUTH_METHOD
-#          value: "trust"
 #        volumeMounts:
 #        - mountPath: /var/lib/postgresql/data
 #          name: #
