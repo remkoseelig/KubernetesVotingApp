@@ -1,15 +1,21 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: #
   annotations:
-    kubernetes.io/ingress.class: addon-http-application-routing
-spec: 
-  rules: 
-  - host: #.#.westeurope.aksapp.io
+    # GKE with shared cert
+    # ingress.gcp.kubernetes.io/pre-shared-cert: training
+    # Azure only
+    # kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+  rules:
+  - host: #
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: #
-          servicePort: #
+          service:
+            name: #
+            port:
+              number: #
